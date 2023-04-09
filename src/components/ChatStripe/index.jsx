@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import { useRef, useEffect } from 'react'
 import './chat-stripe.css'
 import { ThreeDots } from 'react-loader-spinner'
 
@@ -27,14 +27,18 @@ const ChatStripe = ({
         )
 
     useEffect(() => {
-        if (images?.bot)
+        if (images?.bot && imgsRef.current) {
+            console.log('images')
             imgsRef.current.scrollTop = imgsRef.current.scrollHeight
+        }
     }, [images])
 
     if (isAi && isNew)
         typingPromises(value, 20).forEach(promise => {
             promise.then(portion => {
                 botResponseRef.current.innerHTML = portion
+                botResponseRef.current.scrollTop =
+                    botResponseRef.current.scrollHeight
             })
         })
 

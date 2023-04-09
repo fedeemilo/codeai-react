@@ -1,4 +1,3 @@
-import React from 'react'
 import './form.css'
 
 import sendImg from '../../assets/send.svg'

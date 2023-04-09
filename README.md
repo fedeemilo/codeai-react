@@ -1,27 +1,18 @@
-# Codeai
+# Codeai React
 
-<!-- [Live Demo](https://codeai-mu.vercel.app) -->
+[Live Demo](https://codeai-bot.vercel.app/)
 
 ## Installation
 
-### CLIENT
-
--   cd client
--   npm i
--   npm run dev
-
-### SERVER
-
--   cd ..
--   cd server
--   npm i
--   npm run server
+-   npm install
+-   npm start
 
 ## Docs
 
 ```
 clear | CTRL + L = Clean page
 img: = image generator
+*Ejemplo => img: gatos y perros*
 ```
 
 ## Example

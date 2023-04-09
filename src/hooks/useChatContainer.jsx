@@ -4,6 +4,7 @@ const useChatContainer = () => {
     const [messages, setMessages] = useState([])
     const [currentBotId, setCurrentBotId] = useState('')
     const promptElement = useRef(null)
+    const chatElement = useRef(null)
 
     const generateUniqueId = () => {
         const timestamp = Date.now()
@@ -47,6 +48,8 @@ const useChatContainer = () => {
 
         setCurrentBotId(uniqueBotId)
         setMessages(prevMessages => [...prevMessages, userMessage, botMessage])
+
+        chatElement.current.scrollTop = chatElement.current.scrollHeight
 
         try {
             const response = await fetch('https://codeai-5wxe.onrender.com', {
@@ -92,12 +95,13 @@ const useChatContainer = () => {
                 })
                 return updatedMessages
             })
+            chatElement.current.scrollTop = chatElement.current.scrollHeight
         } catch (err) {
             console.error(err)
         }
     }
 
-    return { handleSubmit, messages, promptElement, currentBotId }
+    return { handleSubmit, messages, promptElement, currentBotId, chatElement }
 }
 
 export default useChatContainer

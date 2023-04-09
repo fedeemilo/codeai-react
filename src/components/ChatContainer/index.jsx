@@ -1,4 +1,3 @@
-import React, { useRef, useEffect } from 'react'
 import './chat-container.css'
 
 import Form from '../Form'
@@ -6,12 +5,12 @@ import ChatStripe from '../ChatStripe'
 import useChatContainer from '../../hooks/useChatContainer'
 
 const ChatContainer = () => {
-    const { handleSubmit, messages, promptElement, currentBotId } =
+    const { handleSubmit, messages, promptElement, currentBotId, chatElement } =
         useChatContainer()
 
     return (
         <>
-            <div id="chat_container">
+            <div ref={chatElement} id="chat_container">
                 {messages.map((message, i) => (
                     <ChatStripe
                         key={i}
