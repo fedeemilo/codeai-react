@@ -1,0 +1,37 @@
+form {
+    width: 98%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 10px;
+    background: #40414f;
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border-radius: 5px;
+}
+
+textarea {
+    width: 100%;
+
+    color: #fff;
+    font-size: 18px;
+
+    padding: 10px;
+    background: transparent;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+button {
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    background: transparent;
+}
+
+form img {
+    width: 30px;
+    height: 30px;
+}

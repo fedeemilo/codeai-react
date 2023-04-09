@@ -1,0 +1,21 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    color: #dcdcdc;
+    padding: 1.2rem;
+    font-size: 1.15rem;
+}
+
+footer svg {
+    transform: scale(1.5);
+}
+
+footer a {
+    color: #dcdcdc;
+
+    text-decoration: none;
+}

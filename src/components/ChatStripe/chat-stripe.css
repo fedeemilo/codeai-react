@@ -1,0 +1,92 @@
+.wrapper {
+    width: 100%;
+    padding: 15px;
+}
+
+.ai {
+    background: #40414f;
+}
+
+.chat {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.profile {
+    width: 36px;
+    height: 36px;
+    border-radius: 5px;
+
+    background: #5436da;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ai .profile {
+    background: #10a37f;
+}
+
+.profile img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+.message {
+    flex: 1;
+
+    color: #dcdcdc;
+    font-size: 20px;
+
+    max-width: 100%;
+    overflow-x: scroll;
+    margin: auto;
+
+    white-space: pre-wrap;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* hides scrollbar */
+.message::-webkit-scrollbar {
+    display: none;
+}
+
+.generated-imgs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: row dense;
+}
+
+@media (min-width: 480px) {
+    .generated-imgs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .generated-imgs {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .generated-imgs {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.img-gen {
+    border: 6px solid #343541;
+    border-radius: 4px;
+    margin: 0 1rem 1rem 0;
+}
