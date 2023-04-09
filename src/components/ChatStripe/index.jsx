@@ -26,12 +26,6 @@ const ChatStripe = ({
                 })
         )
 
-    useEffect(() => {
-        if (images?.bot && imgsRef.current) {
-            imgsRef.current.scrollTop = imgsRef.current.scrollHeight
-        }
-    }, [images])
-
     if (isAi && isNew)
         typingPromises(value, 20).forEach(promise => {
             promise.then(portion => {
