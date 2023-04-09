@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import './chat-container.css'
 
 import Form from '../Form'

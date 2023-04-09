@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 import './chat-stripe.css'
 import { ThreeDots } from 'react-loader-spinner'
 
@@ -14,6 +14,7 @@ const ChatStripe = ({
     images
 }) => {
     const botResponseRef = useRef(null)
+    const imgsRef = useRef(null)
 
     const typingPromises = (message, timeout) =>
         [...message].map(
@@ -24,6 +25,11 @@ const ChatStripe = ({
                     }, timeout * i)
                 })
         )
+
+    useEffect(() => {
+        if (images?.bot)
+            imgsRef.current.scrollTop = imgsRef.current.scrollHeight
+    }, [images])
 
     if (isAi && isNew)
         typingPromises(value, 20).forEach(promise => {
@@ -53,7 +59,7 @@ const ChatStripe = ({
                                     )}
                                 </div>
                             )}
-                            <div className="generated-imgs">
+                            <div ref={imgsRef} className="generated-imgs">
                                 {isImageSearch &&
                                     images?.bot?.map(img => (
                                         <img

@@ -11,10 +11,11 @@ footer p {
 }
 
 footer svg {
-    transform: scale(1.5);
+    transform: scale(1.35);
 }
 
 footer a {
+    margin-right: 1rem;
     color: #dcdcdc;
     text-decoration: none;
 }
