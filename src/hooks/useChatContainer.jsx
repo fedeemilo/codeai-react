@@ -95,7 +95,6 @@ const useChatContainer = () => {
                 })
                 return updatedMessages
             })
-            chatElement.current.scrollTop = chatElement.current.scrollHeight
         } catch (err) {
             console.error(err)
         }

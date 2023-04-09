@@ -28,7 +28,6 @@ const ChatStripe = ({
 
     useEffect(() => {
         if (images?.bot && imgsRef.current) {
-            console.log('images')
             imgsRef.current.scrollTop = imgsRef.current.scrollHeight
         }
     }, [images])
@@ -91,4 +90,5 @@ const ChatStripe = ({
             </div>
         )
 }
+
 export default ChatStripe

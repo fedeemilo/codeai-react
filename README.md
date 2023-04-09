@@ -12,8 +12,9 @@
 ```
 clear | CTRL + L = Clean page
 img: = image generator
-*Ejemplo => img: gatos y perros*
 ```
+
+_Ejemplo => img: gatos y perros_
 
 ## Example
 
